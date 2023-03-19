@@ -3,10 +3,12 @@ import cv2 as cv
 import time
 
 while True:  
-  pyautogui.locateOnScreen('C:\Users\Testbench\Documents\bbrPoints.png', confidence=0.5)
-  time.sleep(15)  
+  if pyautogui.locateOnScreen('C:/Users/Testbench/Documents/newbbrPoints.png', confidence=0.01):
+    print('Training image found on screen!')
+  time.sleep(5)  
   pyautogui.hotkey('`')
+  print('Hotkey triggered!')
   if input() == '.': 
     break
   continue
-# enjoy BBR fans ! 
+# enjoy BBR fans !
