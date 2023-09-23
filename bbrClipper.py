@@ -1,12 +1,12 @@
-import pyautogui
+import pydirectinput
 import cv2 as cv
 import time
 
 while True:  
-  if pyautogui.locateOnScreen('C:/Users/Testbench/Documents/newbbrPoints.png', confidence=0.01):
+  if pydirectinput.locateOnScreen('C:/Users/Testbench/Documents/newbbrPoints.png', confidence=0.01):
     print('Training image found on screen!')
   time.sleep(5)  
-  pyautogui.hotkey('`')
+  pydirectinput.hotkey('`')
   print('Hotkey triggered!')
   if input() == '.': 
     break
